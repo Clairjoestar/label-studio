@@ -55,8 +55,8 @@ const Label = ({ label, template, color }) => {
         aria-label="delete label"
       >
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="red" strokeWidth="2" strokeLinecap="square" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 12L12 2"/>
-          <path d="M12 12L2 2"/>
+          <path d="M2 12L12 2" />
+          <path d="M12 12L2 2" />
         </svg>
       </button>
     </li>
@@ -257,7 +257,7 @@ const ConfigureColumn = ({ template, obj, columns }) => {
         <option value="-">{"<set manually>"}</option>
       </select>
       {isManual && (
-        <input value={newValue} onChange={handleChange} onBlur={handleBlur} onKeyDown={handleKeyDown}/>
+        <input value={newValue} onChange={handleChange} onBlur={handleBlur} onKeyDown={handleKeyDown} />
       )}
     </p>
   );
@@ -359,7 +359,7 @@ const Configurator = ({ columns, config, project, template, setTemplate, onBrows
     try {
       setParserError(null);
       setTemplate(config);
-    } catch(e) {
+    } catch (e) {
       setParserError({
         detail: `Parser error`,
         validation_errors: [e.message],
@@ -384,7 +384,7 @@ const Configurator = ({ columns, config, project, template, setTemplate, onBrows
 
   function completeAfter(cm, pred) {
     if (!pred || pred()) {
-      setTimeout(function() {
+      setTimeout(function () {
         if (!cm.state.completionActive)
           cm.showHint({ completeSingle: false });
       }, 100);
@@ -393,7 +393,7 @@ const Configurator = ({ columns, config, project, template, setTemplate, onBrows
   }
 
   function completeIfInTag(cm) {
-    return completeAfter(cm, function() {
+    return completeAfter(cm, function () {
       const token = cm.getTokenAt(cm.getCursor());
 
       if (token.type === "string" && (!/['"]$/.test(token.string) || token.string.length === 1)) return false;
@@ -407,7 +407,7 @@ const Configurator = ({ columns, config, project, template, setTemplate, onBrows
   const extra = (
     <p className={configClass.elem('tags-link')}>
       Configure the labeling interface with tags.
-      <br/>
+      <br />
       <a href="https://labelstud.io/tags/" target="_blank">See all available tags</a>
       .
     </p>
@@ -417,7 +417,7 @@ const Configurator = ({ columns, config, project, template, setTemplate, onBrows
     <div className={configClass}>
       <div className={configClass.elem("container")}>
         <header>
-          <button onClick={onBrowse}>Browse Templates</button>
+          <button onClick={onBrowse}>Browse Templates QAQQWQ</button>
           <ToggleItems items={{ code: "Code", visual: "Visual" }} active={configure} onSelect={onSelect} />
         </header>
         <div className={configClass.elem('editor')}>
@@ -554,7 +554,7 @@ export const ConfigPage = ({
 
   return (
     <div className={wizardClass} data-mode="list" id="config-wizard">
-      {mode ==="list" && (
+      {mode === "list" && (
         <TemplatesList
           case="list"
           selectedGroup={selectedGroup}

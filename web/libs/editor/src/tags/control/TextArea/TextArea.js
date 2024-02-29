@@ -163,7 +163,7 @@ const Model = types.model({
   },
 })).actions(() => isFF(FF_LEAD_TIME)
   ? {}
-  : { countTime: () => {} },
+  : { countTime: () => { } },
 ).actions(self => {
   let lastActiveElement = null;
   let lastActiveElementModel = null;
@@ -235,7 +235,7 @@ const Model = types.model({
     onChange(area) {
       self.updateResult();
       const currentArea = (area ?? self.result?.area);
-      
+
       currentArea?.notifyDrawingFinished();
     },
 
@@ -308,7 +308,7 @@ const Model = types.model({
       if (isFF(FF_DEV_1564_DEV_1565)) {
         if (!isAvailableElement(lastActiveElement, lastActiveElementModel)) {
           if (isFF(FF_DEV_3730)) {
-          // Try to use main textarea element
+            // Try to use main textarea element
             const textareaElement = self.textareaRef.current?.input || self.textareaRef.current?.resizableTextArea?.textArea;
 
             if (isAvailableElement(textareaElement, self)) {
@@ -431,14 +431,15 @@ const HtxTextArea = observer(({ item }) => {
             return false;
           }}
         >
+
           <Form.Item style={itemStyle}>
             {rows === 1
-              ? <Input {...props} aria-label="TextArea Input"/>
-              : <TextArea {...props} aria-label="TextArea Input"/>}
+              ? <Input {...props} aria-label="TextArea Input" />
+              : <TextArea {...props} aria-label="TextArea Input" />}
             {showAddButton && (
               <Form.Item>
                 <Button style={{ marginTop: '10px' }} type="primary" htmlType="submit">
-                    Add
+                  Add
                 </Button>
               </Form.Item>
             )}
@@ -449,7 +450,7 @@ const HtxTextArea = observer(({ item }) => {
       {item.regions.length > 0 && (
         <div style={{ marginBottom: '1em' }}>
           {item.regions.map(t => (
-            <HtxTextAreaRegion key={t.id} item={t} onFocus={onFocus}/>
+            <HtxTextAreaRegion key={t.id} item={t} onFocus={onFocus} />
           ))}
         </div>
       )}

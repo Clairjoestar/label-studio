@@ -5,7 +5,7 @@ import { FieldsButton } from "../../Common/FieldsButton";
 import { FiltersPane } from "../../Common/FiltersPane";
 import { Icon } from "../../Common/Icon/Icon";
 import { Interface } from "../../Common/Interface";
-import { ExportButton, ImportButton } from "../../Common/SDKButtons";
+import { ImportButton } from "../../Common/SDKButtons";
 import { ActionsButton } from "./ActionsButton";
 import { GridWidthButton } from "./GridWidthButton";
 import { LabelButton } from "./LabelButton";
@@ -14,9 +14,9 @@ import { OrderButton } from "./OrderButton";
 import { RefreshButton } from "./RefreshButton";
 import { ViewToggle } from "./ViewToggle";
 
-const style = { 
-  minWidth: '110px', 
-  justifyContent: 'space-between', 
+const style = {
+  minWidth: '110px',
+  justifyContent: 'space-between',
 };
 
 export const instruments = {
@@ -26,7 +26,7 @@ export const instruments = {
   'columns': ({ size }) => {
     const iconProps = {};
     const isNewUI = isFF(FF_LOPS_E_10);
-    
+
     if (isNewUI) {
       iconProps.size = 12;
       iconProps.style = {
@@ -51,22 +51,22 @@ export const instruments = {
     return <OrderButton size={size} style={style} />;
   },
   'grid-size': ({ size }) => {
-    return <GridWidthButton size={size}/>;
+    return <GridWidthButton size={size} />;
   },
   'refresh': ({ size }) => {
-    return <RefreshButton size={size}/>;
+    return <RefreshButton size={size} />;
   },
   'loading-possum': () => {
-    return <LoadingPossum/>;
+    return <LoadingPossum />;
   },
   'label-button': ({ size }) => {
-    return <LabelButton size={size}/>;
+    return <LabelButton size={size} />;
   },
   'actions': ({ size }) => {
     return <ActionsButton size={size} style={style} />;
   },
   'error-box': () => {
-    return <ErrorBox/>;
+    return <ErrorBox />;
   },
   'import-button': ({ size }) => {
     return (
@@ -75,11 +75,11 @@ export const instruments = {
       </Interface>
     );
   },
-  'export-button': ({ size }) => {
-    return (
-      <Interface name="export">
-        <ExportButton size={size}>Export</ExportButton>
-      </Interface>
-    );
-  },
+  // 'export-button': ({ size }) => {
+  //   return (
+  //     <Interface name="export">
+  //       <ExportButton size={size}>Export</ExportButton>
+  //     </Interface>
+  //   );
+  // },
 };

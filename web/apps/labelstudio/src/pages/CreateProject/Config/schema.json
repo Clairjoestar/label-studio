@@ -2893,5 +2893,17 @@
       "Style",
       "View"
     ]
+  },
+  "LatexTranslater": {
+    "name": "LatexTranslater",
+    "description": "translate latex",
+    "attrs": {
+      "contentRef": {
+        "name": "contentRef",
+        "description": "Name of the element to control (video)",
+        "type": "string",
+        "required": true
+      }
+    }
   }
 }

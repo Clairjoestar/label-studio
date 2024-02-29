@@ -48,7 +48,7 @@ const HtxHeader = observer(({ item }) => {
   if (!style.fontSize && size > 4) {
     style.fontSize = size === 5 ? '1.2em' : '1.1em';
   }
-
+  console.log(item);
   return (
     <Typography.Title underline={item.underline} level={size} style={style}>
       {item._value}

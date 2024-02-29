@@ -3,13 +3,13 @@ import { getParent, getType, isRoot, types } from 'mobx-state-tree';
 import Registry from './Registry';
 
 function _mixedArray(fn) {
-  return function(arr) {
+  return function (arr) {
     return types.maybeNull(types.array(fn(arr)));
   };
 }
 
 function _oneOf(lookup, err) {
-  return function(arr) {
+  return function (arr) {
     return types.union({
       dispatcher: sn => {
         if (arr.find(val => sn.type === val)) {
@@ -22,7 +22,7 @@ function _oneOf(lookup, err) {
   };
 }
 
-const oneOfTags = _oneOf(Registry.getModelByTag, 'Not expecting tag: ');
+const oneOfTags = _oneOf(Registry.getModelByTag, 'Not expecting tag1: ');
 const tagsArray = _mixedArray(oneOfTags);
 
 function unionArray(arr) {
@@ -52,7 +52,7 @@ function allModelsTypes() {
         if (Registry.tags.includes(sn.type)) {
           return Registry.getModelByTag(sn.type);
         } else {
-          throw Error('Not expecting tag: ' + sn.type);
+          throw Error('Not expecting tag2: ' + sn.type);
         }
       },
     },

@@ -4,5 +4,5 @@ import { HeaderModel } from './Header';
 import { ViewModel } from './View';
 import { StyleModel } from './Style';
 import { FilterModel } from './Filter';
-
-export { CollapseModel, DialogModel, HeaderModel, ViewModel, StyleModel, FilterModel };
+import { LatexTranslaterModel } from "./LatexTranslater";
+export { CollapseModel, DialogModel, HeaderModel, ViewModel, StyleModel, FilterModel, LatexTranslaterModel };
