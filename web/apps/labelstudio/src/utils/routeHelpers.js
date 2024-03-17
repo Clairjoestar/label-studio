@@ -1,7 +1,6 @@
 import React from 'react';
-import { SentryRoute as Route } from '../config/Sentry';
 import { RouteWithStaticFallback } from "../routes/RouteWithStaticFallback";
-
+import { Route } from "react-router-dom";
 export const RouteContext = React.createContext();
 
 const resolveWithConfig = (routes, config) => {
@@ -99,15 +98,15 @@ export const resolveRoutes = (routes, props) => {
       };
 
       return (
-        <RouteWithStaticFallback key={fullPath} path={fullPath} render={RouteComponent}/>
+        <RouteWithStaticFallback key={fullPath} path={fullPath} render={RouteComponent} />
       );
     } else {
       const routeProps = { key: fullPath, path: fullPath, modal: !!Component.modal };
 
       return (
         <Route {...routeProps} exact render={() => (
-          <Component {...(props ?? {})}/>
-        )} {...rest}/>
+          <Component {...(props ?? {})} />
+        )} {...rest} />
       );
     }
   };

@@ -46,9 +46,9 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
         <Caption>
           Simplify project management by organizing projects into workspaces.
           <a href={createURL('https://docs.humansignal.com/guide/manage_projects#Create-workspaces-to-organize-projects', {
-          experiment: "project_creation_dropdown",
-          treatment: "simplify_project_management",
-        })} target="_blank">Learn more</a>
+            experiment: "project_creation_dropdown",
+            treatment: "simplify_project_management",
+          })} target="_blank">Learn more</a>
         </Caption>
         <HeidiTips collection="projectCreation" />
       </div>
@@ -159,7 +159,7 @@ export const CreateProject = ({ onClose }) => {
             <Button look="primary" size="compact" onClick={onCreate} waiting={waiting || uploading} disabled={!project || uploadDisabled || error}>Save</Button>
           </Space>
         </Modal.Header>
-        <ProjectName
+        < ProjectName
           name={name}
           setName={setName}
           error={error}

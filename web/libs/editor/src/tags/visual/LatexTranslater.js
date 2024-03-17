@@ -5,8 +5,8 @@ import Registry from '../../core/Registry';
 import ProcessAttrsMixin from '../../mixins/ProcessAttrs';
 import { guidGenerator } from '../../utils/unique';
 import 'katex/dist/katex.min.css';
-// import TeX from '@matejmazur/react-katex';
-import katex from "katex";
+import katex from 'katex'
+import { render } from 'react-dom';
 /**
 
  * @name LatexTranslater
@@ -27,7 +27,6 @@ const LatexTranslaterModel = types.compose(
 );
 
 const HtxLatexTranslater = observer(({ item }) => {
-  // console.log("toName:", item.value, item);
   const [text, setText] = useState("");
   const rendered = useMemo(() => katex.renderToString(text, {
     displayMode: true,
@@ -38,8 +37,7 @@ const HtxLatexTranslater = observer(({ item }) => {
     for (const mut of mutLst) {
       if (mut.target.name == item.value) {
         const str = mut.target.value;
-        console.log(str);
-        // const latex = String.raw(mut.target.value).replace('\\`', '`');
+        // console.log(str);
         setText(str);
       }
     }
@@ -47,7 +45,7 @@ const HtxLatexTranslater = observer(({ item }) => {
   useEffect(() => {
     const obs = new MutationObserver(cb);
     obs.observe(document.querySelector("html"), { attributes: true, subtree: true, attributeFilter: ["value"], });
-    console.log("Observed", obs);
+    // console.log("Observed", obs);
     return () => obs.disconnect();
   });
 

@@ -77,3 +77,36 @@ docker-compose.override.yml
 
 # actions-hub
 .github/actions-hub
+web/dist/apps/labelstudio/3rdpartylicenses.txt
+web/dist/apps/labelstudio/index.html
+web/dist/apps/labelstudio/main.css
+web/dist/apps/labelstudio/main.css.map
+web/dist/apps/labelstudio/main.js
+web/dist/apps/labelstudio/main.js.LICENSE.txt
+web/dist/apps/labelstudio/main.js.map
+web/dist/libs/editor/3rdpartylicenses.txt
+web/dist/libs/editor/772.js
+web/dist/libs/editor/772.js.map
+web/dist/libs/editor/index.html
+web/dist/libs/editor/magic-wand-tool.62006cfffd96b89205dacd28b761e789.svg
+web/dist/libs/editor/main.css
+web/dist/libs/editor/main.css.map
+web/dist/libs/editor/main.js
+web/dist/libs/editor/main.js.LICENSE.txt
+web/dist/libs/editor/main.js.map
+web/dist/libs/editor/public/favicon.ico
+web/dist/libs/editor/public/index.html
+web/dist/libs/editor/public/manifest.json
+web/dist/libs/editor/public/files/barradeen-emotional.mp3
+web/dist/libs/editor/public/files/opossum_intro.webm
+web/dist/libs/editor/public/files/opossum_snow.mp4
+web/dist/libs/editor/public/files/video.mp4
+web/dist/libs/editor/public/files/images/DSC03121.jpg
+web/dist/libs/editor/public/images/3nowhite.svg
+web/dist/libs/editor/public/images/astro-visuals.jpg
+web/dist/libs/editor/public/images/GitHub-Mark-64px.png
+web/dist/libs/editor/public/images/logo.png
+web/dist/libs/editor/public/images/ls_logo.png
+web/dist/libs/editor/public/images/ls_logo.svg
+web/dist/libs/editor/public/styles/main.css
+web/dist/libs/editor/static/js/decode-audio.wasm

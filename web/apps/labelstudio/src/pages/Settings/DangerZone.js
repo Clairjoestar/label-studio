@@ -75,10 +75,12 @@ export const DangerZone = () => {
   }, {
     type: 'tabs',
     help: 'If the Data Manager is not loading, dropping all Data Manager tabs can help.',
+    disabled: true,
     label: `Drop All Tabs`,
   }, {
     type: 'project',
     help: 'Deleting a project removes all tasks, annotations, and project data from the database.',
+    disabled: true,
     label: 'Delete Project',
   }], [project]);
 
@@ -115,7 +117,7 @@ export const DangerZone = () => {
         </Space>
       ) : (
         <div style={{ display: "flex", justifyContent: "center", marginTop: 32 }}>
-          <Spinner size={32}/>
+          <Spinner size={32} />
         </div>
       )}
     </div>
